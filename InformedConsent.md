@@ -1,7 +1,7 @@
-# DICHIARAZIONE DI CONSENSO AL TRATTAMENTO DEI DATI PERSONALI AI SENSI DELL'ART. 13 DEL REGOLAMENTO UE N. 679/2016 DEL 27 APRILE 2016
+# DICHIARAZIONE DI CONSENSO AL TRATTAMENTO DEI DATI PERSONALI AI SENSI DELL'*ART. 13 DEL REGOLAMENTO UE N. 679/2016 DEL 27 APRILE 2016*
 
 La ringraziamo per la partecipazione alla ricerca per il progetto didattico ***Fondamenti di Human-Computer Interaction A.A. 2024/2025 - Benessere Urbano (Mobilità e Pendolarismo)***.
-Di seguito, ai sensi dell'art. 13 del GDPR (General Data Protection Regulation), regolamento UE n. 679/2016 del 27 aprile 2016, forniamo alcune informazioni sul trattamento dei dati che saranno raccolti durante lo studio.
+Di seguito, ai sensi *dell'art. 13 del GDPR* (General Data Protection Regulation), *regolamento UE n. 679/2016 del 27 aprile 2016*, forniamo alcune informazioni sul trattamento dei dati che saranno raccolti durante lo studio.
 
 ## Breve descrizione del progetto di ricerca
 
