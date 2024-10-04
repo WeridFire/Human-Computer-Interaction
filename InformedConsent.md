@@ -11,7 +11,7 @@ Il modo in cui questi spostamenti avvengono influisce profondamente sul benesser
 Questo benessere personale si trasmette all'intera comunità: cittadini meno stressati e più soddisfatti contribuiscono a creare una città più coesa, produttiva e armoniosa. Al contrario, problemi legati alla mobilità,
 come il traffico congestionato o la difficoltà di accesso ai trasporti, possono aumentare le disuguaglianze e peggiorare la qualità della vita urbana. Migliorare la mobilità significa quindi non solo migliorare l'esperienza individuale, ma creare un impatto positivo sull'intera città.  
 
-Il progetto (organizzato da studenti e studentesse del Politecnico di Milano) si propone di migliorare l'esperienza di mobilità urbana e di pendolarismo, aumentando il benessere durante il viaggio, per renderlo più produttivo e piacevole.
+Il progetto (organizzato da *The Benchers*, un gruppo di studenti e studentesse del Politecnico di Milano) si propone di migliorare l'esperienza di mobilità urbana e di pendolarismo, aumentando il benessere durante il viaggio, per renderlo più produttivo e piacevole.
 L'obiettivo è individuare quali tra i molti problemi concernenti il tema sono i più ricorrenti, al fine di presentare tecnologie o piattaforme innovative per affrontare difficoltà comuni, come: la ricerca di parcheggio, l'ottimizzazione del tempo
 durante gli spostamenti e/o il miglioramento della socialità e del benessere durante il pendolarismo.
 
