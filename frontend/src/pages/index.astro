@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import About from '../components/About.astro';
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<div class="w-[400px] flex flex-col gap-4 items-center">
+			<div class="w-full text-center font-bold text-6xl text-white">
+				The <span class="bg-gradient-to-r from-blue-400 to-blue-600 inline-block text-transparent bg-clip-text font-extrabold">Benchers</span>
+			</div>
+			<About />
+			<div class="w-full flex flex-col justify-center items-center gap-6">
+				<Card title="Consegna 1" body="body generic"/>
+				<Card title="Consegna 2" body="body generic"/>
+				<Card title="Consegna 3" body="body generic"/>
+			</div>
+		</div>
+	</main>
+</Layout>
