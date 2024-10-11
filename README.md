@@ -1,5 +1,1 @@
-# Team
 
-# Goal
-
-# Project
