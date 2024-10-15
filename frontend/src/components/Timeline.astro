@@ -1,0 +1,33 @@
+---
+import TimelinePin from "./TimelinePin.astro";
+const allPosts = await Astro.glob("../pages/assignments/*.mdx");
+const divHeight = allPosts.length * 200;
+---
+
+<div class="flex flex-row justify-center timeline transition-height duration-1000 ease-in-out w-3 bg-zinc-800 border-white border rounded-md"
+    style={{ minHeight: "0px"}}
+    data-height={`${divHeight}`}>
+    <div class="flex flex-col min-h-[100%] min-w-72 gap-4 justify-evenly">
+    {
+        allPosts
+          .map((post, index) => (
+            <TimelinePin assignment={post.frontmatter.assignment}
+            title={post.frontmatter.title}
+            description={post.frontmatter.description}
+            date={post.frontmatter.date}
+            right={index % 2 === 0}
+            />
+          ))
+      }
+      </div>
+</div>
+
+<script is:inline>
+    window.addEventListener('load', () => {
+        const timeline = document.getElementsByClassName("timeline")[0];
+        if (timeline) {
+            const targetHeight = timeline.getAttribute("data-height");
+            timeline.style.minHeight = `${targetHeight}px`;
+        }
+    });
+</script>

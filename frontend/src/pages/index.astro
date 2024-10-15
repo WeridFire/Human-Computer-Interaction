@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 import About from '../components/About.astro';
+import Timeline from '../components/Timeline.astro';
 ---
 
 <Layout title="Welcome to Astro.">
@@ -11,11 +11,7 @@ import About from '../components/About.astro';
 				The <span class="bg-gradient-to-r from-blue-400 to-blue-600 inline-block text-transparent bg-clip-text font-extrabold">Benchers</span>
 			</div>
 			<About />
-			<div class="w-full flex flex-col justify-center items-center gap-6">
-				<Card title="Consegna 1" body="NEEDFINDING: Alla ricerca del problema."/>
-				<Card title="Consegna 2" body="body generic"/>
-				<Card title="Consegna 3" body="body generic"/>
-			</div>
+			<Timeline />
 		</div>
 	</main>
 </Layout>

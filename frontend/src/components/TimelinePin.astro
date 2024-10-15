@@ -1,0 +1,19 @@
+---
+interface Props {
+	assignment: number;
+	title: string;
+	description: string;
+	date: string;
+	href?: string;
+	right?: boolean;
+}
+
+const { assignment, title, description, date, href, right} = Astro.props;
+---
+
+
+<div class="p-2 rounded-md shadow-md shadow-black w-1/2 bg-zinc-200 hover:scale-125 transition-all hover:cursor-pointer" style={{marginLeft: `${right && 50 || !right && 0}%`, marginRight: `${right && 50 || !right && 0}%`}}>
+	<div class="w-full h-full flex flex-col justify-center ">
+		<div class="font-medium"><span class="font-extrabold">#{assignment}</span> {title}</div>
+	</div>
+</div>
