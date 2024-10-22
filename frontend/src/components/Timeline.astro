@@ -11,6 +11,7 @@ const divHeight = allPosts.length * 200;
     {
         allPosts
           .map((post, index) => (
+            post.frontmatter.published &&
             <TimelinePin assignment={post.frontmatter.assignment}
             title={post.frontmatter.title}
             description={post.frontmatter.description}
