@@ -30,7 +30,7 @@ const { assignment, title, description, date, href, right} = Astro.props;
 	</div>
 </div>
 
-<script>
+<script is:inline>
     document.addEventListener('DOMContentLoaded', () => {
         const dateR = document.getElementsByClassName('animated-date-right')[0];
 		const dateL = document.getElementsByClassName('animated-date-left')[0];
