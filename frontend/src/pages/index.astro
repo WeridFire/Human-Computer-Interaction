@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import About from '../components/About.astro';
 import Timeline from '../components/Timeline.astro';
+import Clouds from "../components/Clouds.jsx";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -11,6 +12,7 @@ import Timeline from '../components/Timeline.astro';
 				The <span class="bg-gradient-to-r from-blue-400 to-blue-600 inline-block text-transparent bg-clip-text font-extrabold">Benchers</span>
 			</div>
 			<About />
+			<Clouds client:load/>
 			<Timeline />
 		</div>
 	</main>
