@@ -1,8 +1,12 @@
 import { useState, useEffect, useRef } from "react";
 import { Icon } from '@iconify/react';
+import useDataStore from "../store/store";
 
 export default function Clouds({}){
-    const [scrollPercentage, setScrollPercentage] = useState(0);
+
+    const scrollPercentage = useDataStore((state) => state.scrollPercentage);
+    const setScrollPercentage = useDataStore((state) => state.setScrollPercentage);
+
     const cloudsBox = useRef(null);
     const cloudsVerticalBox = useRef(null);
 
