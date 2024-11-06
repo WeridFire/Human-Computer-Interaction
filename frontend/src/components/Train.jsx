@@ -16,7 +16,7 @@ export default function Train({}){
 
     return(
         <div className="min-w-[90vw] overflow-hidden h-[300px] flex flex-col justify-center">
-            <img ref={trainRef} src="Human-Computer-Interaction/train.png" className="m-12 transition-all duration-1000 ease-in-out" style={{transform: "translate(-100%)"}}/>
+            <img ref={trainRef} src="/Human-Computer-Interaction/train.png" className="m-12 transition-all duration-1000 ease-in-out" style={{transform: "translate(-100%)"}}/>
         </div>
     )
 }
