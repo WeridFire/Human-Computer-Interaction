@@ -1,0 +1,15 @@
+---
+import Image from "astro/components/Image.astro"
+---
+
+
+
+<div class="group min-h-[30rem] bg-black/10 flex flex-row px-12 gap-1 relative overflow-hidden border-b-8 border-black">
+    <div class="relative w-1/2 bg-white/90 flex flex-col justify-center rounded-md shadow-xl my-4 group-hover:translate-x-[100%] ease-in-out transition-all duration-500">
+        <slot />
+        <div class="bottom-24 absolute group-hover:opacity-0 w-full text-center font-medium text-xl transition-all duration-300">Know your crowd</div>
+        <div class="bottom-24 absolute group-hover:opacity-100 opacity-0 w-full text-center font-medium text-xl transition-all duration-300">Find your cloud</div>
+    </div>
+    <img src="/Human-Computer-Interaction/train.png" class="absolute left-0 -translate-x-[75%] bottom-0 -z-10 group-hover:translate-x-[75%] transition-all duration-1000 ease-out"/>
+    <img src="/Human-Computer-Interaction/background.webp" class= "absolute -z-20 left-1/2 -translate-x-1/2 scale-125" />
+</div>

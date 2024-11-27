@@ -1,21 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import About from '../components/About.astro';
-import Timeline from '../components/Timeline.astro';
-import Clouds from "../components/Clouds.jsx";
-import Train from '../components/Train';
+import Branding from '../components/Branding.astro';
+import Title from '../components/Title.astro';
+import TestimonialsList from '../components/TestimonialsList.astro';
 ---
 
 <Layout title="The Benchers">
-	<main>
-		<div class="min-w-[300px] flex flex-col gap-4 items-center">
-			<div class="w-full text-center font-bold text-6xl text-white">
-				The <span class="bg-gradient-to-r from-blue-400 to-blue-600 inline-block text-transparent bg-clip-text font-extrabold">Benchers</span>
-			</div>
-			<About />
-			<Train client:load/>
-			<Clouds client:load/>
-			<Timeline />
-		</div>
-	</main>
+	<div class="w-full h-full flex flex-col justify-center gap-12">
+		<Branding>
+			<Title />
+		</Branding>
+		<TestimonialsList />
+	</div>
 </Layout>
