@@ -3,13 +3,15 @@ import Layout from '../layouts/Layout.astro';
 import Branding from '../components/Branding.astro';
 import Title from '../components/Title.astro';
 import TestimonialsList from '../components/TestimonialsList.astro';
+import Process from "../components/Timeline/Process.astro";
 ---
 
 <Layout title="The Benchers">
-	<div class="w-full h-full flex flex-col justify-center gap-12">
+	<div class="w-full flex flex-col justify-center gap-12">
 		<Branding>
 			<Title />
 		</Branding>
+		<Process />
 		<TestimonialsList />
 	</div>
 </Layout>
