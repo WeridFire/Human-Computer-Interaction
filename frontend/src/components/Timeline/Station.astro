@@ -4,15 +4,19 @@ import TimelinePin from './TimelinePin.astro';
 interface Props {
 	x: string;
     y: string;
+    id: number;
 }
 
-const { x, y } = Astro.props;
+const { x, y, id } = Astro.props;
 ---
 
 
 
 
-<div style={{left: `${x}`, bottom: `${y}`}} 
-class={`absolute bottom-[${y}] -translate-x-[50%] translate-y-[50%] bg-red-200 rounded-full border-[12px] border-red-700 aspect-square size-16 transition-all duration-500 ease-in-out hover:border-4 hover:shadow-2xl`}>
-
-</div>
+<a style={{left: `${x}`, bottom: `${y}`}} 
+    class={`group absolute bottom-[${y}] -translate-x-[50%] translate-y-[50%] bg-red-200 rounded-full border-[12px] border-red-700 aspect-square size-16 transition-all duration-500 ease-in-out hover:border-4 hover:shadow-2xl`}
+    href={`./assignments/C${id}`}>
+    <div class="group-hover:opacity-100 opacity-0 font-extrabold size-fit">
+        #{id}
+    </div>
+</a>
