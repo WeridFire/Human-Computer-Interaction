@@ -1,0 +1,32 @@
+---
+import Station from "./Timeline/Station.astro";
+const allPosts = await Astro.glob("../pages/assignments/*.mdx");
+---
+
+
+
+<div class="h-fit">
+    <div class="relative w-[100%] h-fit">
+        {allPosts[0] && 
+            <Station x="42%" y="95%" id={1} href={allPosts[0].frontmatter.link}/>
+        }
+        {allPosts[1] && 
+            <Station x="64%" y="75%" id={2} href={allPosts[1].frontmatter.link}/>
+        }
+        {allPosts[2] && 
+            <Station x="37%" y="58%" id={3} href={allPosts[2].frontmatter.link}/>
+        }
+        {allPosts[3] && 
+            <Station x="64%" y="41%" id={4} href={allPosts[3].frontmatter.link}/>
+        }
+        {allPosts[4] && 
+            <Station x="37%" y="24%" id={5} href={allPosts[4].frontmatter.link}/>
+        }
+        {allPosts[5] && 
+            <Station x="62%" y="5%" id={6} href={allPosts[5].frontmatter.link}/>
+        }
+        <div class="w-full flex flex-row justify-center">
+            <img src="/Human-Computer-Interaction/rail.png" class="w-1/3" />
+        </div>
+    </div>
+</div>
