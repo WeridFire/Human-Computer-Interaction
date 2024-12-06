@@ -5,8 +5,8 @@ const allPosts = await Astro.glob("../pages/assignments/*.mdx");
 
 
 
-<div class="h-fit">
-    <div class="relative w-[100%] h-fit">
+<div class="relative h-fit -my-14 bg-black overflow-hidden">
+    <div class="relative size-full min-w-10 h-fit">
         {allPosts[0] && 
             <Station x="42%" y="95%" id={1} href={allPosts[0].frontmatter.link}/>
         }
@@ -25,8 +25,9 @@ const allPosts = await Astro.glob("../pages/assignments/*.mdx");
         {allPosts[5] && 
             <Station x="62%" y="5%" id={6} href={allPosts[5].frontmatter.link}/>
         }
-        <div class="w-full flex flex-row justify-center">
-            <img src="/Human-Computer-Interaction/rail.png" class="w-1/3" />
+        <div class="w-full flex flex-row justify-center border-black">
+            <img src="/Human-Computer-Interaction/rail_red.png" class="w-1/3 z-10" />
         </div>
     </div>
+    <img src="/Human-Computer-Interaction/info2.png" class="absolute top-0 left-1/2 -translate-x-1/2 z-0 w-full opacity-40" />
 </div>
