@@ -11,7 +11,7 @@ const allPosts = await Astro.glob("../pages/assignments/*.mdx");
         .map((post, index) => (
           <Assignment id={post.frontmatter.assignment}
           title={post.frontmatter.title}
-          date={post.frontmatter.date},
+          date={post.frontmatter.date}
           href={post.url}
           />
         ))
