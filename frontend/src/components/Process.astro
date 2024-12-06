@@ -1,33 +1,27 @@
 ---
+import Assignment from "./Timeline/Assignment.astro";
 import Station from "./Timeline/Station.astro";
 const allPosts = await Astro.glob("../pages/assignments/*.mdx");
 ---
 
 
-
-<div class="relative h-fit -my-14 bg-black overflow-hidden">
-    <div class="relative size-full min-w-10 h-fit">
-        {allPosts[0] && 
-            <Station x="42%" y="95%" id={1} href={allPosts[0].frontmatter.link}/>
-        }
-        {allPosts[1] && 
-            <Station x="64%" y="75%" id={2} href={allPosts[1].frontmatter.link}/>
-        }
-        {allPosts[2] && 
-            <Station x="37%" y="58%" id={3} href={allPosts[2].frontmatter.link}/>
-        }
-        {allPosts[3] && 
-            <Station x="64%" y="41%" id={4} href={allPosts[3].frontmatter.link}/>
-        }
-        {allPosts[4] && 
-            <Station x="37%" y="24%" id={5} href={allPosts[4].frontmatter.link}/>
-        }
-        {allPosts[5] && 
-            <Station x="62%" y="5%" id={6} href={allPosts[5].frontmatter.link}/>
-        }
-        <div class="w-full flex flex-row justify-center border-black">
-            <img src="/Human-Computer-Interaction/rail_red.png" class="w-1/3 z-10" />
-        </div>
-    </div>
-    <img src="/Human-Computer-Interaction/info2.png" class="absolute top-0 left-1/2 -translate-x-1/2 z-0 w-full opacity-40" />
+<div class="flex w-full justify-center z-40 overflow-hidden bg-gradient-to-b to-easyblue from-cyan-950">
+    <div class="w-full flex flex-col justify-start items-center gap-12 relative py-12">
+        <Assignment id={1} />
+        <Assignment id={1} />
+        <Assignment id={1} />
+        <Assignment id={1} />
+        <Assignment id={1} />
+        <img src="Human-Computer-Interaction/rail.png" class="absolute top-0 -z-10 opacity-40"/>
+    </div>  
 </div>
+
+
+<style>
+	.scroll-anim {
+	  transition: opacity 1s, transform 1s;
+	}
+	.scroll-anim {
+	  animation: fadeInUp;
+	}
+</style>

@@ -2,22 +2,63 @@
 import TimelinePin from './TimelinePin.astro';
 
 interface Props {
-	x: string;
-    y: string;
-    id: number;
-    href: string;
+  x: string;
+  y: string;
+  id: number;
+  href: string;
 }
 
 const { x, y, id, href } = Astro.props;
+
+let shape = "";
+
+if (id === 1) {
+  shape = "triangle";
+} else if (id === 2) {
+  shape = "square";
+} else if (id === 3) {
+  shape = "pentagon";
+} else if (id === 4) {
+  shape = "hexagon";
+} else if (id === 5) {
+  shape = "circle";
+}
 ---
 
-
-
-
-<a style={{left: `${x}`, bottom: `${y}`}} 
-    class={`z-20 group absolute bottom-[${y}] -translate-x-[50%] translate-y-[50%] bg-red-200 rounded-full border-[1vw] border-red-700 aspect-square size-[7vw] transition-all duration-500 ease-in-out hover:border-4 hover:shadow-2xl`}
+<div class="relative">
+    <a 
+    style={{ left: `${x}`, bottom: `${y}` }} 
+    class={`z-20 absolute group -translate-x-[50%] translate-y-[50%] bg-cyan-50 aspect-square size-[7vw] transition-all duration-500 ease-in-out hover:shadow-2xl ${shape}`} 
     href={href}>
-    <div class="bottom-1/2 left-1/2 -translate-x-1/2 translate-y-[40%] group-hover:opacity-100 opacity-0 font-extrabold size-fit transition-all duration-1000 text-center absolute group-hover:scale-[200%]">
-        #{id}
-    </div>
-</a>
+        <div 
+            class="bottom-1/2 left-1/2 -translate-x-1/2 translate-y-[40%] group-hover:opacity-100 opacity-0 font-extrabold size-fit transition-all duration-1000 text-center absolute group-hover:scale-[200%]">
+            #{id}
+        </div>
+    </a>
+    <div 
+    style={{ left: `${x}`, bottom: `${y}` }} 
+    class={`z-10 absolute group -translate-x-[50%] translate-y-[50%] bg-easyblue aspect-square size-[9vw] transition-all duration-500 ease-in-out ${shape}`} 
+    />
+</div>
+
+<style>
+.triangle {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.square {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.pentagon {
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+
+.hexagon {
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+.circle {
+  border-radius: 50%;
+}
+</style>
