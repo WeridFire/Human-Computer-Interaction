@@ -1,18 +1,22 @@
 ---
 import Assignment from "./Timeline/Assignment.astro";
-import Station from "./Timeline/Station.astro";
 const allPosts = await Astro.glob("../pages/assignments/*.mdx");
 ---
 
 
 <div class="flex w-full justify-center z-40 overflow-hidden bg-gradient-to-b to-easyblue from-cyan-950">
     <div class="w-full flex flex-col justify-start items-center gap-12 relative py-12">
-        <Assignment id={1} />
-        <Assignment id={1} />
-        <Assignment id={1} />
-        <Assignment id={1} />
-        <Assignment id={1} />
-        <img src="Human-Computer-Interaction/rail.png" class="absolute top-0 -z-10 opacity-40"/>
+      {
+        allPosts
+        .map((post, index) => (
+          <Assignment id={post.frontmatter.assignment}
+          title={post.frontmatter.title}
+          date={post.frontmatter.date},
+          href={post.url}
+          />
+        ))
+      }
+        <img src="../Human-Computer-Interaction/rail.png" class="absolute top-0 -z-10 opacity-40"/>
     </div>  
 </div>
 

@@ -1,17 +1,20 @@
 ---
 interface Props {
 	id: number,
+	title: string,
+	date: string,
+	href: string
 }
 
-const { id} = Astro.props;
+const { id, title, date, href} = Astro.props;
 ---
 
 
-<div class="px-4 flex flex-col justify-center animate-fadeInUp aspect-square size-[40vw] lg:size-[20vw] bg-gradient-to-br from-cyan-900 to-cyan-950 border-2 border-cyan-700 rounded-md shadow-xl">
-	<div class="font-extrabold text-3xl text-white">#{id}</div>
-	<div class="font-extrabold text-3xl text-white">TITLE</div>
-	<div class="font-extrabold text-3xl text-white">#{id}</div>
-</div>
+<a href={href} class="px-4 py-24 flex flex-col justify-center animate-fadeInUp aspect-square h-[40vw] lg:h-[20vw] bg-gradient-to-br from-cyan-900 to-cyan-950 border-2 border-cyan-700 rounded-md shadow-xl">
+	<div class="font-extrabold text-8xl text-white">#{id}</div>
+	<div class="font-body text-2xl text-white">{title}</div>
+	<div class="font-extrabold text-xl text-white">{date}</div>
+</a>
 
 
 

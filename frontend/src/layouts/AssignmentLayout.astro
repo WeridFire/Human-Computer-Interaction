@@ -1,0 +1,46 @@
+---
+const { frontmatter } = Astro.props;
+---
+
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={frontmatter.description} />
+		<meta name="viewport" content="" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{frontmatter.title}</title>
+        <link href="https://fonts.googleapis.com/css2?family=Notable&display=swap" rel="stylesheet">
+	</head>
+    <body>
+        <div class="w-[100vw] h-[150vh] bg-gradient-to-b from-easyblue to-cyan-900 flex flex-col">
+            <div class="bg-cyan-900 flex flex-row">
+                <a class="font-body text-white text-4xl px-4 py-8" href="/Human-Computer-Interaction/">Easy Board</a>
+            </div>
+            <div class="w-full flex flex-col items-center">
+                <div class="font-body text-white text-7xl px-4 py-8 text-center">
+                    {frontmatter.title}
+                </div>
+                <div class="w-full flex flex-row justify-center gap-14 relative px-32 min-h-[50vh]">
+                    <div class="w-1/2 flex flex-col">
+                        {(frontmatter.presentation != null || frontmatter.prototype != null) &&
+                        <a href={frontmatter.presentation != null && frontmatter.presentation || frontmatter.prototype != null && frontmatter.prototype} class="bg-gradient-to-br from-easyblue to-cyan-700 h-full rounded-md border border-cyan-200 text-center flex flex-col justify-center">
+                            <span class="font-body text-4xl text-white">
+                                {frontmatter.presentation != null && "Presentation"}
+                                {frontmatter.prototype != null && "Prototype"}
+                            </span>
+                        </a>}
+                    </div>
+                    <div class="w-1/2 text-3xl flex flex-col justify-center animate-fadeInUp z-10">
+                        <p class="font-semibold mb-10 bg-gradient-to-r from-white to-cyan-500 bg-clip-text text-center leading-snug -tracking-4 text-transparent">
+                            {frontmatter.description}
+                        </p>
+                    </div>
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 bg-easyblue border-2 border-cyan-800 rounded-md h-full w-3" />
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
