@@ -24,11 +24,11 @@ const { frontmatter } = Astro.props;
                     {frontmatter.title}
                 </div>
                 <div class="w-full flex flex-row justify-center gap-14 relative px-32 min-h-[50vh]">
-                    <div class="w-1/2 flex flex-col">
+                    <div class="w-1/2 flex flex-col gap-2">
                         {Object.entries(frontmatter.data).map(([key, value]) => (
                             <a
                                 href={`${value}`}
-                                class="bg-gradient-to-br from-easyblue to-cyan-700 h-full rounded-md border border-cyan-200 text-center flex flex-col justify-center mb-4"
+                                class="hover:scale-105 transition-all duration-500 ease-in-out bg-gradient-to-br from-easyblue to-cyan-700 h-full rounded-md border border-cyan-200 text-center flex flex-col justify-center"
                             >
                                 <span class="font-body text-4xl text-white capitalize">
                                     {key}
