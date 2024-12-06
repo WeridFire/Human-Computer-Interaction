@@ -25,14 +25,18 @@ const { frontmatter } = Astro.props;
                 </div>
                 <div class="w-full flex flex-row justify-center gap-14 relative px-32 min-h-[50vh]">
                     <div class="w-1/2 flex flex-col">
-                        {(frontmatter.presentation != null || frontmatter.prototype != null) &&
-                        <a href={frontmatter.presentation != null && frontmatter.presentation || frontmatter.prototype != null && frontmatter.prototype} class="bg-gradient-to-br from-easyblue to-cyan-700 h-full rounded-md border border-cyan-200 text-center flex flex-col justify-center">
-                            <span class="font-body text-4xl text-white">
-                                {frontmatter.presentation != null && "Presentation"}
-                                {frontmatter.prototype != null && "Prototype"}
-                            </span>
-                        </a>}
+                        {Object.entries(frontmatter.data).map(([key, value]) => (
+                            <a
+                                href={`${value}`}
+                                class="bg-gradient-to-br from-easyblue to-cyan-700 h-full rounded-md border border-cyan-200 text-center flex flex-col justify-center mb-4"
+                            >
+                                <span class="font-body text-4xl text-white capitalize">
+                                    {key}
+                                </span>
+                            </a>
+                        ))}
                     </div>
+                    
                     <div class="w-1/2 text-3xl flex flex-col justify-center animate-fadeInUp z-10">
                         <p class="font-semibold mb-10 bg-gradient-to-r from-white to-cyan-500 bg-clip-text text-center leading-snug -tracking-4 text-transparent">
                             {frontmatter.description}
