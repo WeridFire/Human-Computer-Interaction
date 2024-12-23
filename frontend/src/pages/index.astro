@@ -5,6 +5,9 @@ import Process from "../components/Process.astro";
 import AppPreview from "../components/AppPreview.astro";
 import NavigationBar from "../components/NavigationBar.astro";
 import Paragraph from "../components/Paragraph.astro";
+import Timeline from '@components/Timeline/Timeline';
+const allPosts = await Astro.glob("../pages/assignments/*.mdx");
+
 ---
 
 <Layout title="EasyBoard">
@@ -15,6 +18,6 @@ import Paragraph from "../components/Paragraph.astro";
 			<Paragraph />
 			<Paragraph inverted img="/Human-Computer-Interaction/info.jpg"/>
 			<Paragraph img="/Human-Computer-Interaction/favicon.png"/>
-			<Process />
+			<Timeline client:load allPosts={JSON.stringify(allPosts)} />
 		</div>
 </Layout>
