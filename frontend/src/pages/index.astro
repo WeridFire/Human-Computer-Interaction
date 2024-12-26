@@ -6,6 +6,7 @@ import AppPreview from "../components/AppPreview.astro";
 import NavigationBar from "../components/NavigationBar.astro";
 import Paragraph from "../components/Paragraph.astro";
 import Timeline from '@components/Timeline/Timeline';
+import FigmaEmbed from '@components/FigmaEmbed.astro';
 const allPosts = await Astro.glob("../pages/assignments/*.mdx");
 
 ---
@@ -15,6 +16,7 @@ const allPosts = await Astro.glob("../pages/assignments/*.mdx");
 		<NavigationBar />
 		<Branding />
 		<AppPreview />
+		<FigmaEmbed />
 		<section id="about">
 			<Paragraph />
 			<Paragraph inverted img="/Human-Computer-Interaction/info.jpg"/>
