@@ -4,7 +4,7 @@ const allPosts = await Astro.glob("../pages/assignments/*.mdx");
 ---
 
 
-<div class="flex w-full justify-center z-40 overflow-hidden bg-gradient-to-b to-easyblue from-cyan-950">
+<section id="timeline" class="flex w-full justify-center z-40 overflow-hidden bg-gradient-to-b to-easyblue from-cyan-950">
     <div class="w-full flex flex-col justify-start items-center gap-12 relative py-12">
       {
         allPosts
@@ -18,7 +18,7 @@ const allPosts = await Astro.glob("../pages/assignments/*.mdx");
       }
         <img src="/Human-Computer-Interaction/graphics/rail.png" class="absolute top-0 -z-10 opacity-40"/>
     </div>  
-</div>
+  </section>
 
 
 <style>

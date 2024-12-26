@@ -8,22 +8,20 @@ interface Props {
 
 const { title, description, inverted, img} = Astro.props;
 
-
-
 ---
 
-
-
 <div class="flex w-full justify-center z-40 overflow-hidden">
-    <div class=`py-12 w-full ${inverted ? "bg-gradient-to-b" : "bg-gradient-to-t"} from-easyblue to-cyan-950 flex flex-col justify-center items-center`>
-        <p class=`font-bold mb-10 ${inverted ? "bg-gradient-to-l" : "bg-gradient-to-r"} from-white to-cyan-500 bg-clip-text text-center leading-snug -tracking-4 text-transparent text-3xl`>
+    <div class={`py-12 w-full ${inverted ? "bg-gradient-to-b" : "bg-gradient-to-t"} from-easyblue to-cyan-950 flex flex-col justify-center items-center`}>
+        <p class={`font-bold mb-10 px-4 ${inverted ? "bg-gradient-to-l" : "bg-gradient-to-r"} from-white to-cyan-500 bg-clip-text text-center leading-snug -tracking-4 text-transparent text-3xl`}>
             {title ? title : "Lorem ipsum dolor sit amet"}
         </p>
-        <div class=`flex justify-center gap-16 text-white items-center ${img == null || inverted ? "text-start" : "text-end"}  ${inverted ? "flex-row" : "flex-row-reverse"}`>
+        <div class={`flex flex-wrap md:flex-nowrap justify-center gap-8 md:gap-16 text-white items-center ${img == null || inverted ? "text-start" : "text-end"} ${inverted ? "md:flex-row" : "md:flex-row-reverse"}`}>
             {img &&
-            <img src={img} class="max-w-sm aspect-square"/>
+            <img src={img} class="max-w-sm p-4 aspect-square"/>
             }
-            <div class=`leading-loose ${img == null ? "max-w-4xl" : "max-w-md"} text-xl`>{description ? description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullamco laboriosam, nisi ut aliquid ex ea commodi consequatur. Duis aute irure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."}</div>
+            <div class={`leading-loose px-6 ${img == null ? "max-w-4xl" : "max-w-sm"} text-xl text-center md:text-left`}>
+                {description ? description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullamco laboriosam, nisi ut aliquid ex ea commodi consequatur. Duis aute irure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."}
+            </div>
         </div>
     </div>
 </div>

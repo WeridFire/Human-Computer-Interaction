@@ -11,13 +11,17 @@ const allPosts = await Astro.glob("../pages/assignments/*.mdx");
 ---
 
 <Layout title="EasyBoard">
-	<NavigationBar />
-		<div class="w-full flex flex-col justify-center gap-[2px] bg-easyblue">
-			<Branding />
-			<AppPreview />
+	<div class="w-full flex flex-col justify-center gap-[2px] bg-easyblue">
+		<NavigationBar />
+		<Branding />
+		<AppPreview />
+		<section id="about">
 			<Paragraph />
 			<Paragraph inverted img="/Human-Computer-Interaction/info.jpg"/>
-			<Paragraph img="/Human-Computer-Interaction/favicon.png"/>
+		</section>
+		<Paragraph img="/Human-Computer-Interaction/favicon.png"/>
+		<section id="timeline">
 			<Timeline client:load allPosts={JSON.stringify(allPosts)} />
-		</div>
+		</section>
+	</div>
 </Layout>
