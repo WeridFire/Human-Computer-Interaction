@@ -19,12 +19,13 @@ const allPosts = await Astro.glob("../pages/assignments/*.mdx");
 		<AppPreview />
 		<FigmaEmbed />
 		<section id="about">
-			<Paragraph />
-			<Paragraph inverted img="/Human-Computer-Interaction/info.jpg"/>
+			<Paragraph title='Perché esiste EasyBoard?' description='La mobilità urbana e suburbana è un elemento cruciale per il benessere collettivo, influenzando il comfort, la sicurezza e l’efficienza degli spostamenti quotidiani. Un sistema di trasporti efficace non solo migliora l’esperienza individuale dei viaggiatori, ma contribuisce anche a ridurre lo stress, favorire la produttività e promuovere l’armonia sociale. Tuttavia, criticità come il sovraffollamento continuano a rappresentare un ostacolo significativo per il miglioramento della qualità del servizio.'/>
+			<Paragraph inverted img="/Human-Computer-Interaction/favicon.png" title='EasyBoard: “know the crowd, find your cloud”' description='EasyBoard nasce dalla consapevolezza che affrontare il sovraffollamento è il passo più importante per ottimizzare l’esperienza di viaggio. Concentrandosi sui principali mezzi di trasporto urbano e suburbano – metropolitana e treno – EasyBoard mira a minimizzare i disagi legati al sovraffollamento e quindi anche a problemi legati indirettamente, come sicurezza e comodità.'/>
 		</section>
-		<Paragraph img="/Human-Computer-Interaction/favicon.png"/>
+		<Paragraph img="/Human-Computer-Interaction/info.jpg" title="L'applicazione" description="Proponiamo un'applicazione che fornisce dati utili e aggiornati che consentono agli utenti di prendere decisioni informate. L’utente ha inoltre la possibilità di selezionare appositi filtri in base alle tecnologie disponibili nel mezzo di trasporto, per sapere esattamente dov’è la sua nuvola ideale. Grazie a un sistema di segnalazioni integrato, EasyBoard supporta una gestione proattiva del servizio, creando valore sia per i passeggeri che per le aziende di trasporto, contribuendo così a una mobilità più fluida e sostenibile."/>
+		<Paragraph title="Obiettivo Generale dell’Applicazione" description='L’applicazione è progettata per fornire un’esperienza semplice, intuitiva e completa per la gestione dei viaggi su rete ferroviaria e metropolitana. Gli utenti possono cercare informazioni dettagliate sullo specifico mezzo di trasporto, sia per i treni che per la metropolitana, applicando filtri di ricerca per soddisfare le proprie esigenze di viaggio. La struttura dell’app permette un accesso rapido alle informazioni desiderate e una navigazione chiara tra le diverse funzionalità, garantendo al contempo la possibilità di condividere segnalazioni e personalizzare le preferenze di viaggio.' />
 		<section id="timeline">
-			<Paragraph title="Our Process"/>
+			<Paragraph title="Timeline" description='Qui vi presentiamo le tappe fondamentali del nostro percorso progettuale.'/>
 			<Timeline client:load allPosts={JSON.stringify(allPosts)} />
 		</section>
 		<Footer />

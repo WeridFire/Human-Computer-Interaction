@@ -71,7 +71,7 @@ const Timeline = ({ allPosts }) => {
                     href={link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-3 py-1 bg-blue-500 text-white rounded-lg text-sm hover:bg-blue-600"
+                    className="px-3 py-1 bg-blue-500 text-white rounded-lg shadow-md shadow-blue-600/70 text-sm hover:bg-blue-600 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300"
                   >
                     {label}
                   </a>
