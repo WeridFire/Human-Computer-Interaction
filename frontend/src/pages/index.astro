@@ -24,6 +24,7 @@ const allPosts = await Astro.glob("../pages/assignments/*.mdx");
 		</section>
 		<Paragraph img="/Human-Computer-Interaction/favicon.png"/>
 		<section id="timeline">
+			<Paragraph title="Our Process"/>
 			<Timeline client:load allPosts={JSON.stringify(allPosts)} />
 		</section>
 		<Footer />
