@@ -1,0 +1,16 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Branding from '../components/Branding.astro';
+import NavigationBar from "../components/NavigationBar.astro";
+import Footer from '@components/Footer.astro';
+import Form from '../components/Form.astro';
+
+---
+
+<Layout title='Contact Us'>
+    <div class="flex flex-col w-full h-full justify-center gap-[2px] bg-easyblue">
+        <NavigationBar />
+        <Form />
+        <Footer />
+    </div>
+</Layout>
