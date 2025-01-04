@@ -24,10 +24,15 @@ export default {
 				'0%': { gap: '40px' },
 				'100%': { gap: '0px'  },
 			},
+			spinSlow: {
+				'0%': { transform: 'rotate(0deg)' },
+				'100%': { transform: 'rotate(360deg)' },
+			},
 		  },
 		  animation: {
 			fadeInUp: 'fadeInUp 1s ease-out forwards',
 			gapGrow: 'gapGrow 1s ease-in-out',
+			'spin-slow': 'spinSlow 3s linear infinite',
 		  },
 	},
 	},

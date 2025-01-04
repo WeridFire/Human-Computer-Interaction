@@ -1,0 +1,21 @@
+---
+import Person from '../components/Person.astro';
+
+---
+
+<div class="flex w-full justify-center z-40 overflow-hidden">
+    <div class={`py-12 w-full bg-gradient-to-b from-easyblue to-cyan-950 flex flex-col justify-center items-center`}>
+        <p class={`font-bold mb-10 px-4 bg-gradient-to-l from-white to-cyan-500 bg-clip-text text-center leading-snug -tracking-4 text-transparent text-3xl animate-fadeInUp`}>
+            Chi Siamo?
+        </p>
+        <div class={`flex flex-wrap max-w-6xl justify-center gap-8 md:gap-16 text-white items-center text-start md:flex-row `}>
+            <Person name='Fulvio Marelli' mail='mailto:fulvio.marelli@mail.polimi.it' instagram='https://www.instagram.com/fu.mare/' github='https://github.com/papagna3' linkedin='https://www.linkedin.com/in/fulvio-marelli/' img='/Human-Computer-Interaction/team/Fulvio.jpg'/>
+            <Person name='Filippo Maretti' mail='mailto:filippo.maretti@mail.polimi.it'  img='/Human-Computer-Interaction/team/Fil.jpg' instagram='https://www.instagram.com/maretti_filippo/' github='https://github.com/WeridFire' linkedin='https://www.linkedin.com/in/filippo-maretti-967a092b3/'/>
+            <Person name='Leonardo Liorni' mail='mailto:leonardo.liorni@mail.polimi.it' instagram='https://www.instagram.com/leonardoliorni' linkedin='http://www.linkedin.com/in/leonardo-liorni-b910a3345' img='/Human-Computer-Interaction/team/Leo.jpg'/>
+            <Person name='Davide Locatelli' mail='mailto:davide.locatelli@mail.polimi.it' github='https://github.com/Dere-Wah' instagram='https://www.instagram.com/daviloca_/' linkedin='https://www.linkedin.com/in/davide-locatelli-91a360304/' img='/Human-Computer-Interaction/team/DavL.jpg'/>
+            <Person name='Manuel Maiuolo' mail='mailto:manuel.maiuolo@mail.polimi.it' instagram='https://www.instagram.com/manuelmaiuolo' github='https://github.com/BestPlayerMMIII' linkedin='https://www.linkedin.com/in/manuel-maiuolo-211449252/' img='/Human-Computer-Interaction/team/Manu.jpg'/>
+            <Person name='Anna Mettifogo' mail='mailto:anna.mettifogo@mail.polimi.it'  img='/Human-Computer-Interaction/team/Anna.jpg' github='https://github.com/MettiFire' linkedin='http://www.linkedin.com/in/anna-mettifogo-a37751292' instagram='https://www.instagram.com/mettignis/'/>
+            <Person name='Davide Martini' mail='mailto:davide.martini@mail.polimi.it'  instagram='https://www.instagram.com/doevi?igsh=MXBmZnVrZnVnMGQ2' img='/Human-Computer-Interaction/team/DavM.jpg'/>
+        </div>
+    </div>
+</div>
