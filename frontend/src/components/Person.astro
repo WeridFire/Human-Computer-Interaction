@@ -5,13 +5,14 @@ interface Props {
     mail?: string,
     github?: string,
     instagram?: string,
-    linkedin?: string
+    linkedin?: string,
+    inverted?: boolean
 }
 
-const { name, img, mail, github, instagram, linkedin} = Astro.props;
+const { name, img, mail, github, instagram, linkedin, inverted} = Astro.props;
 ---
 
-<div class="text-center text-gray-500 dark:text-gray-400 space-y-4 bg-white/15 py-6 px-8 rounded-2xl shadow-lg shadow-slate-900 backdrop-blur-xl transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300">
+<div class="text-center text-gray-500 dark:text-gray-400 space-y-4 bg-white/15 py-6 px-8 rounded-2xl shadow-lg shadow-slate-900 backdrop-blur-xl md:transition md:ease-in-out md:hover:-translate-y-1 md:hover:scale-110 md:duration-300">
     <img class="mx-auto mb-4 w-36 h-36 rounded-full items-center object-cover transition-transform duration-500 hover:animate-spin-slow" src={img ? img : "/Human-Computer-Interaction/team/profile-icon.jpg"} alt={name ? name : "Alt name"}>
     <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
         {name ? name : "Nome"}
